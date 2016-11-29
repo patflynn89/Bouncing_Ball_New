@@ -4,7 +4,8 @@ import view.BallView;
 
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
-import java.awt.Dimension;
+import java.awt.*;
+
 
 public class MainFrame extends JFrame {
     private int width;
@@ -17,6 +18,7 @@ public class MainFrame extends JFrame {
         System.out.println("In the constructor: " + SwingUtilities.isEventDispatchThread());
         setPreferredSize(new Dimension(640, 480));
         this.width = getPreferredSize().width;
+        //Made a ridiculous comment
         this.height = getPreferredSize().height;
         pack();
 //        System.out.println(getPreferredSize().width);
