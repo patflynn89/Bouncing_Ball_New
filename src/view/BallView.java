@@ -31,7 +31,7 @@ public class BallView extends JPanel {
                 isEventDispatchThread());
 
     }
-
+//dsofinvodsnifv
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
