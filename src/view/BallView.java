@@ -1,7 +1,7 @@
 package view;
 
-import frame.MainFrame;
 import constants.GameConstants;
+import view.Frame;
 
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
@@ -9,27 +9,21 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.io.Serializable;
 
 
+public class BallView extends JPanel implements Serializable {
 
-public class BallView extends JPanel {
 
-    private MainFrame mainFrame;
-    private int boardWidth;
-    private int boardHeight;
-    private int ballRadius;
+    private static final long serialVersionUID = 6766563673706562252L;
     private String shape;
+    private Frame frame;
 
-    public BallView(MainFrame mainFrame) {
-        this.mainFrame = mainFrame;
+    public BallView(Frame frame) {
+        this.frame = frame;
         this.shape = "The Ball rests.";
         System.out.println("BallView Constructor: " + SwingUtilities.isEventDispatchThread());
-        System.out.println(mainFrame.getPreferredSize().getWidth());
-        System.out.println(this.mainFrame.getPreferredSize().height);
-        this.mainFrame.add(this);
-        System.out.println("End of BallView constructror: " + SwingUtilities.
-                isEventDispatchThread());
-
+        //Frame frame = Frame.getFrames();
     }
 
     @Override
@@ -45,7 +39,7 @@ public class BallView extends JPanel {
         System.out.println("End of PaintComponent: " + SwingUtilities.isEventDispatchThread());
 
         ball.setColor(Color.black);
-        System.out.println(this.mainFrame.getContentPane().getHeight() - 5);
-        ball.drawString(this.shape, 5, /*5*/ this.mainFrame.getContentPane().getHeight() - 5);
+        ball.drawString(shape, this.frame.getContentPane().getX(), this.frame.getContentPane().
+                getHeight());
     }
 }
