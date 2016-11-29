@@ -24,7 +24,7 @@ public class BallView extends JPanel {
         this.mainFrame = mainFrame;
         this.shape = "The Ball rests.";
         System.out.println("BallView Constructor: " + SwingUtilities.isEventDispatchThread());
-        System.out.println(mainFrame.getPreferredSize().width);
+        System.out.println(mainFrame.getPreferredSize().getWidth());
         System.out.println(this.mainFrame.getPreferredSize().height);
         this.mainFrame.add(this);
         System.out.println("End of BallView constructror: " + SwingUtilities.
