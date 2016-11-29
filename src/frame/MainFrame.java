@@ -6,7 +6,9 @@ import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 import java.awt.*;
 
-
+/**
+ * The <code>MainFrame</code> of the Program.
+ */
 public class MainFrame extends JFrame {
     private int width;
     private int height;
@@ -19,6 +21,7 @@ public class MainFrame extends JFrame {
         setPreferredSize(new Dimension(640, 480));
         this.width = getPreferredSize().width;
         //Made a ridiculous comment
+        //made another useless comment
         this.height = getPreferredSize().height;
         pack();
 //        System.out.println(getPreferredSize().width);
