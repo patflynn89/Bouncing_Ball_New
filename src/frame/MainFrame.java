@@ -20,8 +20,6 @@ public class MainFrame extends JFrame {
         System.out.println("In the constructor: " + SwingUtilities.isEventDispatchThread());
         setPreferredSize(new Dimension(640, 480));
         this.width = getPreferredSize().width;
-        //Made a ridiculous comment
-        //made another useless comment
         this.height = getPreferredSize().height;
         pack();
 //        System.out.println(getPreferredSize().width);
@@ -31,9 +29,7 @@ public class MainFrame extends JFrame {
         setVisible(true);
     }
 
-    //jhdsbfvjh
     /**
-     *
      * This is the main method of the program. It creates the <code>GameExecution</code> - Model and
      * also a new Thread which creates the <code>MainFrame</code>.
      *
