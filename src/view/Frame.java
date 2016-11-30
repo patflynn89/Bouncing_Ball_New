@@ -8,30 +8,23 @@ import java.awt.Dimension;
  * This class creates the <code>MainFrame</code> of the Program.
  */
 public class Frame extends JFrame {
-    private int width;
-    private int height;
-    private Frame frame;
 
     /**
      * The constructor of the Mainframe
-     * @param boardWidth
-     * @param boardHeight
+     * @param boardWidth The width of the frame.
+     * @param boardHeight The height of the frame.
      */
     public Frame(int boardWidth, int boardHeight) {
         System.out.println("In the constructor: " + SwingUtilities.isEventDispatchThread());
+        super.setTitle("Ball in a Box");
         setPreferredSize(new Dimension(boardWidth, boardHeight));
-        this.width = getPreferredSize().width;
-        this.height = getPreferredSize().height;
         BallView ball = new BallView(this);
         add(ball);
+        pack();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
-        pack();
         setVisible(true);
     }
 
-    public Frame getFrame() {
-        return this;
-    }
 
 }

@@ -23,7 +23,6 @@ public class BallView extends JPanel implements Serializable {
         this.frame = frame;
         this.shape = "The Ball rests.";
         System.out.println("BallView Constructor: " + SwingUtilities.isEventDispatchThread());
-        //Frame frame = Frame.getFrames();
     }
 
     @Override
